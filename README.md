@@ -10,7 +10,12 @@ This repository provides source code for breast segmentation using Deep Multi-Ma
 * Albumentations
 
 ## Inference
-The main inference codes are `slidereader_coords.py` and `inference.py`. You first need to run `slidereader_coords.py` to generate patch coordinates to be segmented in input whole slide images. After generating patch coordinates, you may run `inference.py` to generate segmentation predictions of input whole slide images. The segmentation predictions will be saved under `imgs/` by default.
+The main inference codes are `slidereader_coords.py` and `inference.py`. 
+
+- Unpack the zip folder 'ptsemseg' and put it in the same place as the executive files. 
+- You first need to run `slidereader_coords.py` to generate patch coordinates to be segmented in the input whole slide images. 
+- After generating patch coordinates, you may run `inference.py` to generate segmentation predictions of input whole slide images.
+- The segmentation predictions will be saved under `imgs/` by default.
 
 You may need to update the following variables before running `slidereader_coords.py`:
 * `slides_to_read`: the list of whole slide images
