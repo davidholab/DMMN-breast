@@ -1,7 +1,7 @@
 # Breast Segmentation
 This repository provides source code for breast segmentation using Deep Multi-Magnification Network. Deep Multi-Magnification Network automatically segments multiple tissue subtypes by a set of patches from multiple magnifications in histopathology whole slide images. The original Deep Multi-Magnification Network paper is published [here](https://doi.org/10.1016/j.compmedimag.2021.101866) and its training and inference codes can be found [here](https://github.com/MSKCC-Computational-Pathology/DMMN).
 
-[<img src="dmmn_beast.png" width="100%" align="center" />](https://doi.org/10.1016/j.modpat.2025.100907)
+<img src="dmmn_breast.png" width="100%" align="center" />
 
 ## Prerequisites
 * Python 3.6.7
