@@ -1,5 +1,5 @@
 # Breast Segmentation
-This repository provides source code for breast segmentation using Deep Multi-Magnification Network. The Deep Multi-Magnification Network automatically segments multiple tissue subtypes using a set of patches from various magnifications in histopathology whole-slide images. The original Deep Multi-Magnification Network paper is published [here](https://doi.org/10.1016/j.compmedimag.2021.101866).
+This repository provides source code for breast segmentation using Deep Multi-Magnification Network. The Deep Multi-Magnification Network automatically segments multiple tissue subtypes using a set of patches from various magnifications in histopathology whole-slide images. The original Deep Multi-Magnification Network paper is published [here](https://doi.org/10.1016/j.compmedimag.2021.101866), and its training and inference codes can be found [here](https://github.com/MSKCC-Computational-Pathology/DMMN).
 
 <img src="dmmn_breast.png" width="100%" align="center" />
 
@@ -12,7 +12,7 @@ This repository provides source code for breast segmentation using Deep Multi-Ma
 ## Inference
 The main inference codes are `slidereader_coords.py` and `inference.py`. 
 
-- Unpack the zip folder $\color{red}{\text{'ptsemseg'}}$ and put it in the same place as the executive files. 
+- Unpack the zip folder `ptsemseg` and put it in the same place as the executive files. 
 - You first need to run `slidereader_coords.py` to generate patch coordinates to be segmented in the input whole slide images. 
 - After generating patch coordinates, you may run `inference.py` to generate segmentation predictions of input whole slide images.
 - The segmentation predictions will be saved under `imgs/` by default.
@@ -28,12 +28,6 @@ In addition to `model_path` and `out_path`, you may need to update the following
 Please download **the pretrained breast segmentation model** [here](https://huggingface.co/hainct/dmmn_breast/tree/main). 
 
 Note that segmentation predictions will be generated in 4-bit BMP format. The size limit for 4-bit BMP files is 2<sup>32</sup> pixels.
-
-## Other pretrained segmentation models
-Please find other pretrained segmentation models using Deep Multi-Magnification Network:
-* **Ovarian model** [here](https://github.com/MSKCC-Computational-Pathology/DMMN-ovary).
-* **Osteosarcoma model** [here](https://github.com/MSKCC-Computational-Pathology/DMMN-osteosarcoma).
-* **Lung model** [here](https://github.com/davidholab/DMMN-lung).
 
 ## License
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE.md) for details.
